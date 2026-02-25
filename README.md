@@ -1,102 +1,118 @@
-# Frontend Mentor - Four card feature section
+# Frontend Mentor - Four card feature section solution
 
-![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this feature section and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+The goal was to recreate the design as closely as possible while ensuring responsiveness and accessibility.
 
-## Where to find everything
+### Screenshot
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+![Desktop Solution Preview](./screenshot.jpg)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution URL: [GitHub Solution URL](https://github.com/whitgunt77/four-card-feature-section)
+- Live Site URL: [Live Site URL](https://whitgunt77.github.io/four-card-feature-section/)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+## My process
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Built with
 
-## Using AI coding assistants
+- Semantic HTML5 markup
+- CSS custom properties (variables)
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Responsive typography using `clamp()`
+- Clean component-based CSS structure
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+### What I learned
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+This project strengthened my understanding of combining **CSS Grid and Flexbox** for layout control.
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+One key improvement area was structuring the 3-column desktop layout while stacking cards correctly on mobile. Using nested grid containers made this much cleaner and easier to manage.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+I also practiced:
 
-## Building your project
+- Creating reusable card components
+- Using CSS custom properties for consistent design tokens
+- Applying subtle box shadows for depth without overdoing it
+- Keeping HTML semantic and accessible
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+Example of the grid structure used for the desktop layout:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```css
+.cards {
+  display: grid;
+  gap: 1.6rem;
+}
 
-## Deploying your project
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+```
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+And a reusable card pattern:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```css
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 14px 24px rgba(0,0,0,0.08);
+  padding: 1.7rem;
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Continued development
 
-## Create a custom `README.md`
+In future projects, I want to:
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- Improve my layout precision when matching design files pixel-for-pixel
+- Refine my responsive design approach for more complex grid systems
+- Continue improving accessibility practices
+- Add subtle animations and micro-interactions for enhanced UX
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Useful resources
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- [MDN Web Docs &mdash; CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) - MDN was my go-to for confirming syntax and understanding how nested grids behave. It's great for checking browser support and reinforcing best practices.
+- [CSS Grid Layout Guide &mdash; CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This guide help me better understand how to structure the three-column desktop layout while keeping the middle cards stacked. The visual diagrams made it much easier to think through grid areas and column distribution.
+- [A Complete Guide to Flexbox &mdash; CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - I referenced this while aligning content inside each card. It was especially helpful for understanding how to push the icons to the bottom using `margin-top: auto` and flex column behavior.
+- [MDN Web Docs &mdash; CSS Custom Properties (Variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - This helped me confidently structure my design tokens using `:root` variables for consistent color management throughout my project.
+- [Frontend Mentor Community Solutions](https://www.frontendmentor.io/solutions) - Reviewing other submissions helped me compare layout strategies and improve my responsiveness approach without copying solutions, It was useful for seeing alternative grid structures.
+- [Google Fonts &mdash; Poppins](https://fonts.google.com//specimen/Poppins) - I used this to properly implement the font weights (200, 400, 600) required by the design while maintaining performance and readability.
 
-## Submitting your solution
+## Author
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+- **Name:** Whitney Gunter
+- **Frontend Mentor:** [Frontend Mentor Profile Link](https://www.frontendmentor.io/profile/whitgunt77)
+- **GitHub:** [GitHub Profile Link](https://www.github.com/whitgunt77)
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+## Acknowledgments
 
-## Sharing your solution
+Design and challenge provided by **Frontend Mentor**
 
-There are multiple places you can share your solution:
+[](https://www.frontendmentor.io)
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+All design files, starter assets, and challenge requirements belong to Frontend Mentor. This project was built as part of their front-end practice challenges.
